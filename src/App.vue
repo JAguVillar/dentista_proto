@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <div style="display: flex">
+    <div style="display: flex;">
       <HelloWorld
-        style="margin-right: 10px; margin-left: 10px"
+        style="margin-right: 10px; margin-left: 10px;"
         :top="Math.floor(Math.random() * 3)"
         :right="Math.floor(Math.random() * 3)"
         :bottom="Math.floor(Math.random() * 3)"
         :left="Math.floor(Math.random() * 3)"
         :center="Math.floor(Math.random() * 3)"
       />
-      <svg
+      <!-- <svg
         width="210mm"
         height="297mm"
         version="1.1"
@@ -72,7 +71,7 @@
             stroke-width="7.9375"
           />
         </g>
-      </svg>
+      </svg> -->
     </div>
   </div>
 </template>
@@ -90,11 +89,12 @@ export default {
 
 <style>
 #app {
+  height: 100vh;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+    background: #eaeefa;
 }
 </style>
