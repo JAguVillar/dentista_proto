@@ -1,42 +1,83 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <svg
+      width="120mm"
+      height="120mm"
+      version="1.1"
+      viewBox="0 0 120 120"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:cc="http://creativecommons.org/ns#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    >
+      <metadata>
+        <rdf:RDF>
+          <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+      <g
+        transform="translate(-46.043 -85.255)"
+        fill="#fff"
+        stroke="#000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect
+          x="61.342"
+          y="100.55"
+          width="89.401"
+          height="89.401"
+          stroke-width="2.6458"
+          :fill="center == '0' ? '#ffffff' : center == '1' ? '#dc2625' : '#2563ea'"
+        />
+        <path
+          transform="scale(.26458)"
+          d="m179.02 327.22 52.396 52.395h338.75l52.396-52.395z"
+          stroke-width="10"
+          :fill="top == '0' ? '#ffffff' : top == '1' ? '#dc2625' : '#2563ea'"
+        />
+        <path
+          d="m164.72 86.577-13.863 13.863v89.628l13.863 13.863z"
+          stroke-width="2.6458"
+          :fill="right == '0' ? '#ffffff' : right == '1' ? '#dc2625' : '#2563ea'"
+        />
+        <path
+          d="m47.365 203.93 13.863-13.863h89.628l13.863 13.863z"
+          stroke-width="2.6458"
+          :fill="bottom == '0' ? '#ffffff' : bottom == '1' ? '#dc2625' : '#2563ea'"
+        />
+        <path
+          d="m47.365 203.93 13.863-13.863v-89.628l-13.863-13.863z"
+          stroke-width="2.6458"
+          :fill="left == '0' ? '#ffffff' : left == '1' ? '#dc2625' : '#2563ea'"
+        />
+      </g>
+    </svg>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
-  }
-}
+    top: String,
+    right: String,
+    bottom: String,
+    left: String,
+    center: String
+  },
+  data() {
+    return {
+    }
+  },
+  mounted() {
+    console.log("csaca")
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
