@@ -32,28 +32,33 @@
           width="89.401"
           height="89.401"
           stroke-width="2.6458"
-          :fill="center == '0' ? '#ffffff' : center == '1' ? '#fba5a4' : '#92c5fc'"
+          :fill="dienteCenter == '0' ? '#ffffff' : dienteCenter == '1' ? '#fba5a4' : '#92c5fc'"
+          @click="clickCenter"
         />
         <path
           transform="scale(.26458)"
           d="m179.02 327.22 52.396 52.395h338.75l52.396-52.395z"
           stroke-width="10"
-          :fill="top == '0' ? '#ffffff' : top == '1' ? '#fba5a4' : '#92c5fc'"
+          :fill="dienteTop == '0' ? '#ffffff' : dienteTop == '1' ? '#fba5a4' : '#92c5fc'"
+          @click="clickTop"
         />
         <path
           d="m164.72 86.577-13.863 13.863v89.628l13.863 13.863z"
           stroke-width="2.6458"
-          :fill="right == '0' ? '#ffffff' : right == '1' ? '#fba5a4' : '#92c5fc'"
+          :fill="dienteRight == '0' ? '#ffffff' : dienteRight == '1' ? '#fba5a4' : '#92c5fc'"
+          @click="clickRight"
         />
         <path
           d="m47.365 203.93 13.863-13.863h89.628l13.863 13.863z"
           stroke-width="2.6458"
-          :fill="bottom == '0' ? '#ffffff' : bottom == '1' ? '#fba5a4' : '#92c5fc'"
+          :fill="dienteBottom == '0' ? '#ffffff' : dienteBottom == '1' ? '#fba5a4' : '#92c5fc'"
+          @click="clickBottom"
         />
         <path
           d="m47.365 203.93 13.863-13.863v-89.628l-13.863-13.863z"
           stroke-width="2.6458"
-          :fill="left == '0' ? '#ffffff' : left == '1' ? '#fba5a4' : '#92c5fc'"
+          :fill="dienteLeft == '0' ? '#ffffff' : dienteLeft == '1' ? '#fba5a4' : '#92c5fc'"
+          @click="clickLeft"
         />
       </g>
     </svg>
@@ -70,14 +75,76 @@ export default {
     left: Number,
     center: Number
   },
-  data() {
+  data () {
     return {
+      dienteTop: this.top,
+      dienteRight: this.right,
+      dienteBottom: this.bottom,
+      dienteLeft: this.left,
+      dienteCenter: this.center
     }
   },
-  mounted() {
+  mounted () {
     console.log("csaca")
   },
-};
+  methods: {
+    clickCenter () {
+      if (this.dienteCenter === 0) {
+        this.dienteCenter = 1
+      } else {
+        if (this.dienteCenter === 1) {
+          this.dienteCenter = 2
+        } else {
+          this.dienteCenter = 0
+        }
+      }
+    },
+    clickTop () {
+      if (this.dienteTop === 0) {
+        this.dienteTop = 1
+      } else {
+        if (this.dienteTop === 1) {
+          this.dienteTop = 2
+        } else {
+          this.dienteTop = 0
+        }
+      }
+    },
+    clickRight () {
+      if (this.dienteRight === 0) {
+        this.dienteRight = 1
+      } else {
+        if (this.dienteRight === 1) {
+          this.dienteRight = 2
+        } else {
+          this.dienteRight = 0
+        }
+      }
+    },
+    clickBottom () {
+      if (this.dienteBottom === 0) {
+        this.dienteBottom = 1
+      } else {
+        if (this.dienteBottom === 1) {
+          this.dienteBottom = 2
+        } else {
+          this.dienteBottom = 0
+        }
+      }
+    },
+    clickLeft () {
+      if (this.dienteLeft === 0) {
+        this.dienteLeft = 1
+      } else {
+        if (this.dienteLeft === 1) {
+          this.dienteLeft = 2
+        } else {
+          this.dienteLeft = 0
+        }
+      }
+    },
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
